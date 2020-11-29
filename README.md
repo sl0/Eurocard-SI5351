@@ -19,11 +19,23 @@ definition for Open Source Hardware Association.
 
 ## Arduino Sketch
 
-A first sketch i got from Wolfram DF7KB, after he made some experiments
+A first sketch I got from Wolfram DF7KB, after he made some experiments
 to reduce phase noise. The genious trick was to rely on integer
 operations only in the synthesizer. It was derived from the examples 
 found in 
 [etherkit libraries][].
+
+
+
+## KiCad files
+
+The schema of the board is easy:
+
+![](pics/Eurocard-Si5351-schema.png)
+
+The routing of the pcb was done by hand:
+
+![](pics/Eurocard-Si5351-pcb.png)
 
 
     Have fun!
