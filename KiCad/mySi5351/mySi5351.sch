@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Eurocard-Si5351"
-Date "2020-10-14"
+Date "2020-10-29"
 Rev "v0.1"
 Comp "DO1SLO"
 Comment1 ""
@@ -61,7 +61,7 @@ U 1 1 5F75262D
 P 6650 1200
 F 0 "C11" H 6650 1300 50  0000 L CNN
 F 1 "100uF" H 6650 1100 50  0000 L CNN
-F 2 "Capacitor_SMD:C_3640_9110Metric_Pad2.10x10.45mm_HandSolder" H 6688 1050 50  0001 C CNN
+F 2 "Capacitor_SMD:CP_Elec_8x10.5" H 6688 1050 50  0001 C CNN
 F 3 "~" H 6650 1200 50  0001 C CNN
 	1    6650 1200
 	1    0    0    -1  
@@ -93,7 +93,7 @@ L Connector:Conn_Coaxial_Power J8
 U 1 1 5F7487B5
 P 6450 1150
 F 0 "J8" H 6450 1350 50  0000 C CNN
-F 1 "Conn_01x02_Female" V 6300 1100 50  0000 C CNN
+F 1 "Conn_01x02_Female" H 6000 1100 50  0000 C CNN
 F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 6450 1150 50  0001 C CNN
 F 3 "~" H 6450 1150 50  0001 C CNN
 	1    6450 1150
@@ -764,7 +764,7 @@ $Comp
 L Connector:Conn_01x05_Female J9
 U 1 1 5FA061DF
 P 6600 3600
-F 0 "J9" H 6500 3800 50  0000 L CNN
+F 0 "J9" H 6650 3600 50  0000 L CNN
 F 1 "Conn_01x05_Female" H 5950 3250 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 6600 3600 50  0001 C CNN
 F 3 "~" H 6600 3600 50  0001 C CNN
@@ -993,7 +993,7 @@ U 1 1 5FB5507B
 P 7400 1050
 F 0 "U3" H 7400 1292 50  0000 C CNN
 F 1 "LM7805_TO220" H 7400 1201 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 7400 1275 50  0001 C CIN
+F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" H 7400 1275 50  0001 C CIN
 F 3 "https://www.onsemi.cn/PowerSolutions/document/MC7800-D.PDF" H 7400 1000 50  0001 C CNN
 	1    7400 1050
 	1    0    0    -1  
@@ -1074,7 +1074,7 @@ U 1 1 5F739F87
 P 9300 2200
 F 0 "A1" H 9300 2650 50  0000 C CNN
 F 1 "Arduino_Nano_v3.x" V 9300 2000 50  0000 C CNN
-F 2 "Module:Arduino_Nano" H 9300 2200 50  0001 C CIN
+F 2 "Module:Arduino_Nano_WithMountingHoles" H 9300 2200 50  0001 C CIN
 F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 9300 2200 50  0001 C CNN
 	1    9300 2200
 	1    0    0    -1  
@@ -1093,9 +1093,9 @@ NoConn ~ 9800 1700
 NoConn ~ 9800 2000
 NoConn ~ 9800 2200
 NoConn ~ 9800 2300
-Text GLabel 9800 2700 2    50   Input ~ 0
+Text GLabel 9900 3100 2    50   Input ~ 0
 SCL
-Text GLabel 9800 2600 2    50   Input ~ 0
+Text GLabel 10200 3100 2    50   Input ~ 0
 SDA
 NoConn ~ 9800 2400
 NoConn ~ 9800 2500
@@ -1159,7 +1159,7 @@ $EndComp
 Wire Wire Line
 	8500 4750 8500 4200
 Wire Wire Line
-	10450 1050 10450 5000
+	10450 1050 10450 3550
 Connection ~ 10450 5000
 $Comp
 L Connector:Conn_01x02_Female J10
@@ -1250,4 +1250,99 @@ NoConn ~ 1850 5600
 NoConn ~ 1250 5600
 Text GLabel 6400 3400 0    50   Input ~ 0
 +5V_Vcc
+Text GLabel 6450 1050 0    50   Input ~ 0
+PWR-Input
+Text GLabel 9250 4550 2    50   Input ~ 0
+10MHz-TTL
+Wire Wire Line
+	9100 4750 9100 4550
+Wire Wire Line
+	9100 4550 9250 4550
+Connection ~ 9100 4750
+$Comp
+L Connector:Conn_01x03_Female J11
+U 1 1 5FA09C1C
+P 5300 4350
+F 0 "J11" H 5192 4635 50  0000 C CNN
+F 1 "Conn_01x03_Female" H 5192 4544 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 5300 4350 50  0001 C CNN
+F 3 "~" H 5300 4350 50  0001 C CNN
+	1    5300 4350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R20
+U 1 1 5FA0BFB6
+P 5950 4350
+F 0 "R20" V 5850 4350 50  0000 C CNN
+F 1 "330" V 5950 4350 50  0000 C CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder" V 5880 4350 50  0001 C CNN
+F 3 "~" H 5950 4350 50  0001 C CNN
+	1    5950 4350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5500 4250 5600 4250
+Wire Wire Line
+	5600 4250 5600 3800
+$Comp
+L Device:R R19
+U 1 1 5FABB847
+P 5650 4450
+F 0 "R19" V 5750 4450 50  0000 C CNN
+F 1 "330" V 5650 4450 50  0000 C CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder" V 5580 4450 50  0001 C CNN
+F 3 "~" H 5650 4450 50  0001 C CNN
+	1    5650 4450
+	0    1    1    0   
+$EndComp
+Text GLabel 5800 4450 2    50   Input ~ 0
++5V_Vcc
+Wire Wire Line
+	6100 4350 7000 4350
+Connection ~ 7000 4350
+Wire Wire Line
+	5500 4350 5800 4350
+Text Notes 4850 4400 0    50   ~ 0
+LED-GPS
+Text Notes 4850 4500 0    50   ~ 0
+LED-PWR
+$Comp
+L Device:R R21
+U 1 1 5FB27C97
+P 9900 3400
+F 0 "R21" H 9970 3446 50  0000 L CNN
+F 1 "2k" H 9970 3355 50  0000 L CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder" V 9830 3400 50  0001 C CNN
+F 3 "~" H 9900 3400 50  0001 C CNN
+	1    9900 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R22
+U 1 1 5FB28BAD
+P 10200 3400
+F 0 "R22" H 10270 3446 50  0000 L CNN
+F 1 "2k" H 10270 3355 50  0000 L CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder" V 10130 3400 50  0001 C CNN
+F 3 "~" H 10200 3400 50  0001 C CNN
+	1    10200 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9800 2700 9900 2700
+Wire Wire Line
+	9900 2700 9900 3250
+Connection ~ 10450 3550
+Wire Wire Line
+	10450 3550 10450 5000
+Wire Wire Line
+	10200 3550 10450 3550
+Wire Wire Line
+	9900 3550 10200 3550
+Connection ~ 10200 3550
+Wire Wire Line
+	9800 2600 10200 2600
+Wire Wire Line
+	10200 2600 10200 3250
 $EndSCHEMATC
